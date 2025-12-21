@@ -7,4 +7,9 @@
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
+
+    <Application.Resources>
+        <FontFamily x:Key="RobotoFont">avares://Calculator/Assets/Fonts#Roboto</FontFamily>
+    </Application.Resources>
+
 </Application>
