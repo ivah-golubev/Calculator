@@ -25,7 +25,7 @@
                 <Button Content="7"/>
                 <Button Content="4"/>
                 <Button Content="1"/>
-                <Button Content="."/>
+                <Button Content="." FontSize="30"/>
             </WrapPanel>
             </StackPanel>
 
@@ -55,7 +55,7 @@
             <WrapPanel Orientation="Vertical">
                 <Button Content="/"/>
                 <Button Content="x"/>
-                <Button Content="-"/>
+                <Button Content="-" FontSize="40"/>
                 <Button Content="+"/>
                 <Button Content="="/>
             </WrapPanel>
