@@ -14,6 +14,17 @@
                 <Setter Property="VerticalContentAlignment" Value="Center"/>
                 <Setter Property="FontFamily" Value="{StaticResource RobotoFont}"/>
                 <Setter Property="FontSize" Value="24"/>
+                <Setter Property="Foreground" Value="#ffffff"/>
+
+                <Style Selector="^:pointerover /template/ ContentPresenter">
+                        <Setter Property="Background" Value="#28252c"/>
+                        <Setter Property="Foreground" Value="#ffffff"/>
+                </Style>
+
+                <Style Selector="^:pressed /template/ ContentPresenter">
+                        <Setter Property="Background" Value="#2d2a32"/>
+                        <Setter Property="Foreground" Value="#ffffff"/>
+                </Style>
         </Style>
 
 </Styles>
