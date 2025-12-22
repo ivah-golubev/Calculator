@@ -2,18 +2,18 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="700"
+        mc:Ignorable="d" d:DesignWidth="350" d:DesignHeight="560"
         x:Class="Calculator.MainWindow"
         Title="Calculator"
-        Width="400"
-        Height="700"
+        Width="350"
+        Height="560"
         CanResize="False">
 
     <Window.Styles>
         <StyleInclude Source="/Styles/MainStyle.axaml"/>
     </Window.Styles>
 
-    <Grid RowDefinitions=" * , 2.5*">
+    <Grid RowDefinitions=" * , 3.5*">
         <StackPanel Grid.Row="0">
     
         </StackPanel>
@@ -22,7 +22,7 @@
             <Grid ColumnDefinitions="*,*,*,*" HorizontalAlignment="Center">
             <StackPanel Grid.Column="0">
             <WrapPanel Orientation="Vertical">
-                <Button Content="C"/>
+                <Button Content="CE"/>
                 <Button Content="7"/>
                 <Button Content="4"/>
                 <Button Content="1"/>
@@ -32,7 +32,7 @@
 
             <StackPanel Grid.Column="1">
             <WrapPanel Orientation="Vertical">
-                <Button Content="+/-"/>
+                <Button Content="x²"/>
                 <Button Content="8"/>
                 <Button Content="5"/>
                 <Button Content="2"/>
@@ -43,18 +43,18 @@
 
             <StackPanel Grid.Column="2">
             <WrapPanel Orientation="Vertical">
-                <Button Content="%"/>
+                <Button Content="√"/>
                 <Button Content="9"/>
                 <Button Content="6"/>
                 <Button Content="3"/>
-                <Button Content="back"/>
+                <Button Content="%"/>
             </WrapPanel>
             </StackPanel>
 
 
            <StackPanel Grid.Column="3">
             <WrapPanel Orientation="Vertical">
-                <Button Content="/"/>
+                <Button Content="÷"/>
                 <Button Content="x"/>
                 <Button Content="-" FontSize="40"/>
                 <Button Content="+"/>
