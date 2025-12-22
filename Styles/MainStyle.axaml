@@ -2,28 +2,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
         <Style Selector="Window">
-                <Setter Property="Background" Value="#121114"/>
+                <Setter Property="Background" Value="#a6f2b8"/>
         </Style>
 
         <Style Selector="Button">
                 <Setter Property="Width" Value="80"/>
                 <Setter Property="Height" Value="80"/>
                 <Setter Property="Margin" Value="3"/>
-                <Setter Property="Background" Value="#222026"/>
+                <Setter Property="Background" Value="#4f6962"/>
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 <Setter Property="VerticalContentAlignment" Value="Center"/>
                 <Setter Property="FontFamily" Value="{StaticResource RobotoFont}"/>
                 <Setter Property="FontSize" Value="24"/>
-                <Setter Property="Foreground" Value="#ffffff"/>
+                <Setter Property="Foreground" Value="#e6e6e6"/>
 
                 <Style Selector="^:pointerover /template/ ContentPresenter">
-                        <Setter Property="Background" Value="#28252c"/>
-                        <Setter Property="Foreground" Value="#ffffff"/>
+                        <Setter Property="Background" Value="#58746d"/>
+                        <Setter Property="Foreground" Value="#e6e6e6"/>
                 </Style>
 
                 <Style Selector="^:pressed /template/ ContentPresenter">
-                        <Setter Property="Background" Value="#2d2a32"/>
-                        <Setter Property="Foreground" Value="#ffffff"/>
+                        <Setter Property="Background" Value="#608079"/>
+                        <Setter Property="Foreground" Value="#e6e6e6"/>
                 </Style>
         </Style>
 
