@@ -21,8 +21,8 @@
 
             <Border Classes="TextPanel" Width="320" Height="125">
                 <StackPanel Grid.Row="0" Classes="TextPanel">
-                    <TextBlock Text="Result" Classes="Result"  HorizontalAlignment="Right" Padding="0, 18, 5, 20"/>
-                    <TextBlock Text="Operations" Classes="Operations" Height="40" HorizontalAlignment="Right" Padding="0, 0, 5, 0"/>
+                    <TextBlock Text="" Classes="Result"  HorizontalAlignment="Right" Padding="0, 18, 5, 20" x:Name="Result"/>
+                    <TextBlock Text="" Classes="Operations" Height="40" HorizontalAlignment="Right" Padding="0, 0, 5, 0" x:Name="Operations"/>
                 </StackPanel>
             </Border>
 
@@ -34,55 +34,171 @@
 
                     <StackPanel Grid.Column="0">
                         <WrapPanel Orientation="Vertical">
-                            <Button Content="CE"/>
-                            <Button Content="7"/>
-                            <Button Content="4"/>
-                            <Button Content="1"/>
-                            <Button Content="." FontSize="30"/>
+                            <Button Content="CE" Click="Add"/>
+                            <Button Content="7" Click="Add"/>
+                            <Button Content="4" Click="Add"/>
+                            <Button Content="1" Click="Add"/>
+                            <Button Content="." FontSize="30" Click="Add"/>
                         </WrapPanel>
                     </StackPanel>
 
 
-                    <StackPanel Grid.Column="1">
-                        <WrapPanel Orientation="Vertical">
-                            <Button Content="x²"/>
-                            <Button Content="8"/>
-                            <Button Content="5"/>
-                            <Button Content="2"/>
-                            <Button Content="0"/>
-                        </WrapPanel>
-                    </StackPanel>
+            <StackPanel Grid.Column="1">
+            <WrapPanel Orientation="Vertical">
+                <Button Content="x²" Click="Add"/>
+                <Button Content="8" Click="Add"/>
+                <Button Content="5" Click="Add"/>
+                <Button Content="2" Click="Add"/>
+                <Button Content="0" Click="Add"/>
+            </WrapPanel>
+            </StackPanel>
 
 
-                    <StackPanel Grid.Column="2">
-                        <WrapPanel Orientation="Vertical">
-                            <Button Content="√x"/>
-                            <Button Content="9"/>
-                            <Button Content="6"/>
-                            <Button Content="3"/>
-                            <Button Content="%"/>
-                        </WrapPanel>
-                    </StackPanel>
+            <StackPanel Grid.Column="2">
+            <WrapPanel Orientation="Vertical">
+                <Button Content="√x" Click="Add"/>
+                <Button Content="9" Click="Add"/>
+                <Button Content="6" Click="Add"/>
+                <Button Content="3" Click="Add"/>
+                <Button Content="%" Click="Add"/>
+            </WrapPanel>
+            </StackPanel>
 
 
-                    <StackPanel Grid.Column="3">
-                        <WrapPanel Orientation="Vertical">
-                            <Button Content="÷"/>
-                            <Button Content="×"/>
-                            <Button Content="-" FontSize="40"/>
-                            <Button Content="+"/>
-                            <Button Content="="/>
-                        </WrapPanel>
-                    </StackPanel>
-
-
-                    
-                </Grid>
-
+           <StackPanel Grid.Column="3">
+            <WrapPanel Orientation="Vertical">
+                <Button Content="÷" Click="Add"/>
+                <Button Content="×" Click="Add"/>
+                <Button Content="-" FontSize="40" Click="Add"/>
+                <Button Content="+" Click="Add"/>
+                <Button Content="=" Click="Add"/>
+            </WrapPanel>
+            </StackPanel>
             </Grid>
-
         </Grid>
-    
-    </Border>
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <Grid RowDefinitions = "auto">
+
+
+            <StackPanel Grid.Row="0">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="2">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="3">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+            </StackPanel>
+
+
+            <StackPanel Grid.Row="4">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="3" Orientation="Horizontal">
+                    <Button Content="+"/>
+                </StackPanel>
+            </StackPanel> -->
+
+
+
+
+
+
+        <!-- </Grid> -->
+ 
+    </Grid>
 
 </Window>
