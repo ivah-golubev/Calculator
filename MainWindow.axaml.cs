@@ -11,9 +11,7 @@ public partial class MainWindow : Window
 
     public void AddDigit(object digit, RoutedEventArgs e){
         String content = (String)((Button)digit).Content;
-
-        // Проверку надо дороботать
-        if(content != "." || (Operations.Text.Length != 0 && Operations.Text[Operations.Text.Length - 1] != '.' && Operations.Text[Operations.Text.Length - 1] != '\x20')){
+        if(Operations.Text[Operations.Text.Length - 1] != '²'){
             Operations.Text += content;
         }
     }
@@ -49,13 +47,19 @@ public partial class MainWindow : Window
     }
 
     public void AddPoint(object point, RoutedEventArgs e){
-
+        if(Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '.' && Operations.Text[Operations.Text.Length - 1] != '\x20' && Operations.Text[Operations.Text.Length - 1] != '²' && Operations.Text[Operations.Text.Length - 1] != '√'){
+            Operations.Text += '.';
+        }
     }
 
     public void Calculate(object calc, RoutedEventArgs e){
             if (Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '\x20' && Operations.Text[Operations.Text.Length - 1] != '√' && Operations.Text[Operations.Text.Length - 1] != '.'){
                 bool Error = false;
                 List<String> NumAndOper = Operations.Text.Substring(1, Operations.Text.Length - 1).Split('\x20').ToList();
+
+                for (int i = 0; i < NumAndOper.Count; i++){
+                    NumAndOper[i] = NumAndOper[i].Replace('.', ',');
+                }
 
                 for (int i = 0; i < NumAndOper.Count; i++){
                     if (NumAndOper[i].IndexOf('²') != -1){
@@ -71,18 +75,20 @@ public partial class MainWindow : Window
 
                 for (int i = 0; i < NumAndOper.Count; i++){
                     if (Error) break;
-                    if (NumAndOper[i] == "×" || NumAndOper[i] == "÷"){
+                    if (NumAndOper[i] == "×" || NumAndOper[i] == "÷" || NumAndOper[i] == "%"){
                         String Answer;
                         double FistNumber = double.Parse(NumAndOper[i - 1]);
                         double SecondNumber = double.Parse(NumAndOper[i + 1]);
                         if (NumAndOper[i] == "×"){
                             Answer = (FistNumber * SecondNumber).ToString();
-                        } else {
+                        } else if(NumAndOper[i] == "÷"){
                             if (SecondNumber == 0){
                                 Error = true;
                                 break;
                             }
                             Answer = (FistNumber / SecondNumber).ToString();
+                        } else {
+                            Answer = (FistNumber * SecondNumber / 100.0).ToString();
                         }
                         NumAndOper.RemoveAt(i - 1);
                         NumAndOper.RemoveAt(i);
@@ -110,7 +116,7 @@ public partial class MainWindow : Window
                 }
 
                 if (!Error){
-                    Result.Text = "ㅤ" + NumAndOper[0];
+                    Result.Text = "ㅤ" + NumAndOper[0].Replace(',', '.');
                 } else {
                     Result.Text = "ㅤ" + "ERROR";
                 }
