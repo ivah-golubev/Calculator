@@ -5,6 +5,7 @@
         mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="590"
         x:Class="Calculator.MainWindow"
         Title="Calculator"
+        Icon="/Assets/Images/avalonia-logo.ico"
         Width="350"
         Height="560"
         CanResize="False">
