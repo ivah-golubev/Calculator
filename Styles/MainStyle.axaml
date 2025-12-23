@@ -5,6 +5,11 @@
                 <Setter Property="Background" Value="#4682B4"/>
         </Style>
 
+        <Style Selector="TextBlock">
+                <Setter Property="FontSize" Value="33"/>
+                <Setter Property="Foreground" Value="Black"/>
+        </Style>
+
 
 
         <Style Selector="Border.TextPanel">

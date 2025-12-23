@@ -5,11 +5,17 @@
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme />
+        <FluentTheme/>
     </Application.Styles>
 
     <Application.Resources>
         <FontFamily x:Key="RobotoFont">avares://Calculator/Assets/Fonts#Roboto</FontFamily>
     </Application.Resources>
+
+   <Application.Resources>
+        <FontFamily x:Key="Digital7">avares://Calculator/Assets/Fonts/digital_7.ttf#Digital-7</FontFamily>
+   </Application.Resources>
+
+    
 
 </Application>
