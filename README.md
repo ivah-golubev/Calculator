@@ -1,4 +1,20 @@
-# Минимальные системные требования 
+# Калькулятор
+Чудо программной инженерии
+
+## Сборка
+
+### Требуется
+1. .NET SDK 9
+2. Avalonia Templates
+
+### Сама сборка
+1. git clone https://github.com/user0x20/Calculator.git
+2. cd Calculator
+3. dotnet build
+
+#### Результат будет хранится в bin/Debug/net9.0
+
+## Минимальные системные требования 
 ![Computer](./Assets/Images/computer.jpg)
  - OS - Windows 10/11, MacOS, Linux
  - CPU - AMD Ryzen 7 7800x3d
