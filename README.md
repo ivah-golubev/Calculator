@@ -10,9 +10,9 @@
 2. Вроде всё
 
 ### Сама сборка
-1. git clone https://github.com/user0x20/Calculator.git
-2. cd Calculator
-3. dotnet build
+1. ```git clone https://github.com/user0x20/Calculator.git```
+2. ```cd Calculator```
+3. ```dotnet build```
 
 #### Результат будет хранится в bin/Debug/net9.0
 
