@@ -11,7 +11,7 @@ public partial class MainWindow : Window
 
     public void AddDigit(object digit, RoutedEventArgs e){
         String content = (String)((Button)digit).Content;
-        if(Operations.Text[Operations.Text.Length - 1] != '²'){
+        if(Operations.Text[Operations.Text.Length - 1] != '²' && Operations.Text.Length < 17){
             Operations.Text += content;
         }
     }
@@ -25,9 +25,11 @@ public partial class MainWindow : Window
         String content = (String)((Button)oper).Content;
         if (Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '√' && Operations.Text[Operations.Text.Length - 1] != '.'){
             if (Operations.Text[Operations.Text.Length - 1] != '\x20'){
-                Operations.Text += '\x20';
-                Operations.Text += content;
-                Operations.Text += '\x20';
+                if (Operations.Text.Length < 15){
+                    Operations.Text += '\x20';
+                    Operations.Text += content;
+                    Operations.Text += '\x20';
+                }
             } else {
                 Operations.Text = Operations.Text.Substring(0, Operations.Text.Length - 2) + content + '\x20';
             }
@@ -35,19 +37,19 @@ public partial class MainWindow : Window
     }
 
     public void AddPower(object power, RoutedEventArgs e){
-        if (Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '√' && Operations.Text[Operations.Text.Length - 1] != '²' && Operations.Text[Operations.Text.Length - 1] != '.' && Operations.Text[Operations.Text.Length - 1] != '\x20'){
+        if (Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '√' && Operations.Text[Operations.Text.Length - 1] != '²' && Operations.Text[Operations.Text.Length - 1] != '.' && Operations.Text[Operations.Text.Length - 1] != '\x20' && Operations.Text.Length < 17){
             Operations.Text += '²';
         }
     }
 
     public void AddSqrt(object sqrt, RoutedEventArgs e){
-        if (Operations.Text.Length == 1 || Operations.Text[Operations.Text.Length - 1] == '\x20'){
+        if (Operations.Text.Length == 1 || (Operations.Text[Operations.Text.Length - 1] == '\x20' && Operations.Text.Length < 17)){
             Operations.Text += '√';
         }
     }
 
     public void AddPoint(object point, RoutedEventArgs e){
-        if(Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '.' && Operations.Text[Operations.Text.Length - 1] != '\x20' && Operations.Text[Operations.Text.Length - 1] != '²' && Operations.Text[Operations.Text.Length - 1] != '√'){
+        if(Operations.Text.Length != 1 && Operations.Text[Operations.Text.Length - 1] != '.' && Operations.Text[Operations.Text.Length - 1] != '\x20' && Operations.Text[Operations.Text.Length - 1] != '²' && Operations.Text[Operations.Text.Length - 1] != '√' && Operations.Text.Length < 17){
             Operations.Text += '.';
         }
     }
@@ -116,7 +118,8 @@ public partial class MainWindow : Window
                 }
 
                 if (!Error){
-                    Result.Text = "ㅤ" + NumAndOper[0].Replace(',', '.');
+                    double result = double.Parse(NumAndOper[0]);
+                    Result.Text = "ㅤ" + Math.Round(result, 15 - Math.Ceiling(Math.Abs(result)).ToString().Length).ToString().Replace(',', '.');
                 } else {
                     Result.Text = "ㅤ" + "ERROR";
                 }
