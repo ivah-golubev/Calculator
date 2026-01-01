@@ -119,7 +119,7 @@ public partial class MainWindow : Window
 
                 if (!Error){
                     double result = double.Parse(NumAndOper[0]);
-                    Result.Text = "ㅤ" + Math.Round(result, 15 - Math.Ceiling(Math.Abs(result)).ToString().Length).ToString().Replace(',', '.');
+                    Result.Text = "ㅤ" + Math.Round(result, 15 - Math.Ceiling(result).ToString().Length).ToString().Replace(',', '.');
                 } else {
                     Result.Text = "ㅤ" + "ERROR";
                 }
