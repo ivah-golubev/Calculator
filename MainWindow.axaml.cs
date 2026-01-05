@@ -17,7 +17,7 @@ public partial class MainWindow : Window
     }
 
     public void Clear(object clear, RoutedEventArgs e){
-        Result.Text = "ㅤ";
+        Result.Text = "42";
         Operations.Text = "ㅤ";
     }
 

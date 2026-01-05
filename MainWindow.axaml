@@ -19,7 +19,7 @@
 
             <Border Classes="TextPanel" Width="320" Height="125">
                 <StackPanel Grid.Row="0" Classes="TextPanel">
-                    <TextBlock Text="ㅤ" Classes="Result"  HorizontalAlignment="Right" Padding="0, 0, 5, 0" x:Name="Result" FontFamily="avares://Calculator/Assets/Fonts/digital_7.ttf#Digital-7"/>
+                    <TextBlock Text="42" Classes="Result"  HorizontalAlignment="Right" Padding="0, 0, 5, 0" x:Name="Result" FontFamily="avares://Calculator/Assets/Fonts/digital_7.ttf#Digital-7"/>
                     <TextBlock Text="ㅤ" Classes="Operations" HorizontalAlignment="Right" Padding="0, 0, 5, 20" x:Name="Operations" FontFamily="avares://Calculator/Assets/Fonts/digital_7.ttf#Digital-7"/>
                 </StackPanel>
             </Border>
